@@ -3,26 +3,10 @@
 
 using namespace std;
 
-LZespolona utwoz(double Re, double Im){
-  LZespolona z;
-  z.re=Re;
-  z.im=Im;
-  return z;
-}
-void Wyswietl(LZespolona l){
-  cout<<'('<<l.re<<showpos<<l.im<<noshowpos<<'i'<<')'<<endl;
 
-}
 
 int main(int argc, char **argv)
 {
-
-  LZespolona L1=utwoz(2,-3);
-  Wyswietl(L1);
-  LZespolona L2=utwoz(3,4);
-  Wyswietl(L2);
-  LZespolona L3=L1-L2;
-  Wyswietl(L3);
 
   
   /*  if (argc < 2) {
