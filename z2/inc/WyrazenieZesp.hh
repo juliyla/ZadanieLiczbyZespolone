@@ -1,15 +1,7 @@
 #ifndef WYRAZENIEZESP_HH
 #define WYRAZENIEZESP_HH
 
-
-using std::cout;
-using std::cin;
-using std::showpos;
-using std::noshowpos;
-using std::istream;
-using std::ostream;
-using std::ios;
-using std::cerr;
+using namespace std;
 
 #include "LZespolona.hh"
 

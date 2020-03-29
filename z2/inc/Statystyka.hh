@@ -16,4 +16,6 @@ int ile_wszystkich(Statystyka &stat);
 int ile_poprawnych(Statystyka &stat);
 float procent_poprawnych(Statystyka &stat);
 
-ostream & operator <<(ostream &strm,  Statystyki &stat);
+ostream & operator <<(ostream &strm,  Statystyka &stat);
+
+#endif
