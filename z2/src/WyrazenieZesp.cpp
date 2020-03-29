@@ -1,36 +1,7 @@
 #include "WyrazenieZesp.hh"
 
 
-/*
- * Tu nalezy zdefiniowac funkcje, ktorych zapowiedzi znajduja sie
- * w pliku naglowkowym.
- */
 
-void WyswietlZesp(LZespolona Skl){
-   cout << "(" << Skl.re << showpos << Skl.im << noshowpos << "i)";
-}
-
-void Wyswietl(WyrazenieZesp  WyrZ){
- WyswietlZesp(WyrZ.Arg1);
-
-     switch(WyrZ.Op){
-   case Op_Dodaj:
-      cout<<"+";
-      break;
-   case Op_Odejmij:
-      cout<<"-";
-      break;
-   case Op_Mnoz:
-      cout<<"*";
-      break;
-   case Op_Dziel:
-      cout<<"/";
-      break;
-     }
-WyswietlZesp(WyrZ.Arg2);
-
-
- }
 
 LZespolona Oblicz(WyrazenieZesp  WyrZ){
     LZespolona wynik;

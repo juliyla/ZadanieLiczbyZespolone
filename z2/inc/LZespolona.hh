@@ -39,8 +39,15 @@ LZespolona operator - (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona operator * (LZespolona  Skl1,  LZespolona  Skl2);
 LZespolona operator / (LZespolona  Skl1,  LZespolona  Skl2);
 
-istream & operator >>(istream & strm, LZespolona & Skl);
-ostream & operator <<(ostream & strm, LZespolona & Skl); 
+LZespolona sprzezenie(LZespolona Skl1);
+double modul(LZespolona Skl1);
+LZespolona operator /(LZespolona Skl1,double liczba);
+
+bool operator ==(LZespolona Skl1, LZespolona Skl2);
+bool operator !=(LZespolona Skl1, LZespolona Skl2);
+
+istream & operator >>(istream & strm, const LZespolona & Skl);
+ostream & operator <<(ostream & strm, const LZespolona & Skl); 
 
 LZespolona Utworz(double re, double im);
 

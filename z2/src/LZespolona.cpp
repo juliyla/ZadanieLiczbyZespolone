@@ -77,11 +77,55 @@ LZespolona  operator * (LZespolona  Skl1,  LZespolona  Skl2){
 LZespolona  operator / (LZespolona  Skl1,  LZespolona  Skl2){
   LZespolona  Wynik;
 
+   Wynik= Skl1*sprzezenie(Skl2)/pow(modul(Skl2),2);
   
-  Wynik.re = (Skl1.re*Skl2.re+Skl1.im*Skl2.im)/(Skl2.re*Skl2.re+Skl2.im*Skl2.im);
-  Wynik.im = (Skl2.re*Skl1.im-Skl1.re*Skl2.im)/(Skl2.re*Skl2.re+Skl2.im*Skl2.im);
   return Wynik; 
   
+}
+
+LZespolona sprzezenie(LZespolona Skl1)
+{
+  LZespolona Wynik;
+   Wynik.re=Skl1.re;
+   Wynik.im=Skl1.im*-1;
+   return Wynik;
+}
+
+double modul(LZespolona Skl1)
+{
+  double Wynik;
+  Wynik=sqrt((Skl1.re * Skl1.re) + (Skl1.im * Skl1.im));
+  return Wynik;
+}
+
+LZespolona operator / (LZespolona Skl1, double liczba)
+{
+  LZespolona Wynik;
+  if(liczba==0){
+  cout<<"Nie wolno dzielic przez 0"<<endl;
+  }
+  else
+  Wynik.re=Skl1.re/liczba;
+  Wynik.im=Skl1.im/liczba;
+  
+  return Wynik;
+}
+
+
+bool operator == (LZespolona Skl1, LZespolona Skl2){
+  if(Skl1.re==Skl2.re && Skl1.im==Skl2.im)
+    return true;
+  else
+    return false;
+
+}
+
+bool operator !=(LZespolona Skl1, LZespolona Skl2)
+{
+  if(Skl1.re!=Skl2.re || Skl1.im!=Skl2.im)
+  return true;
+  else
+  return false;
 }
 
 /*Tworzenie liczby zespolonej */
@@ -94,8 +138,6 @@ LZespolona Utworz(double re, double im){
 
   return liczb;
 }
-
-
 
 
 istream & operator >>(istream & strm, LZespolona & Skl){

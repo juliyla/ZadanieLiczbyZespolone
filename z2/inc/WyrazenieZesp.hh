@@ -2,6 +2,14 @@
 #define WYRAZENIEZESP_HH
 
 
+using std::cout;
+using std::cin;
+using std::showpos;
+using std::noshowpos;
+using std::istream;
+using std::ostream;
+using std::ios;
+using std::cerr;
 
 #include "LZespolona.hh"
 
@@ -23,19 +31,11 @@ struct WyrazenieZesp {
 };
 
 
-/*
- * Funkcje ponizej nalezy zdefiniowac w module.
- *
- */
-
-void WyswietlZesp(LZespolona);
-void Wyswietl(WyrazenieZesp  WyrZ);
 LZespolona Oblicz(WyrazenieZesp  WyrZ);
-
-std::istream & operator >> (std::istream & strm, WyrazenieZesp & WyrZ);
-std::istream & operator >> (std::istream & strm, Operator & op);
-std::ostream & operator << (std::ostream & strm, const WyrazenieZesp & WyrZ);
-std::ostream & operator << (std::ostream & strm, const Operator & Op);
+istream & operator >> (istream & strm, WyrazenieZesp & WyrZ);
+istream & operator >> (istream & strm, Operator & op);
+ostream & operator << (ostream & strm, const WyrazenieZesp & WyrZ);
+ostream & operator << (ostream & strm, const Operator & Op);
 
 
 #endif
